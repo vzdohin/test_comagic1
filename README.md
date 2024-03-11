@@ -42,4 +42,4 @@ npm start
 
 ## Деплой
 
-(https://test-comagic1.vercel.app/)[https://test-comagic1.vercel.app/]
+(link)[https://test-comagic1.vercel.app/]
