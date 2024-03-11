@@ -1,0 +1,97 @@
+/* 
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  max-width: 300px;
+  margin-bottom: 50px;
+}
+
+.form__input {
+  padding: 10px;
+  border: 2px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+  outline: none;
+}
+
+.form__input:focus {
+  border-color: #a2d5f2;
+}
+
+.form__button {
+  padding: 10px 20px;
+  background-color: #005f73;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.form__button:hover {
+  background-color: #0a9396;
+}
+
+.form__button:active {
+  background-color: #94d2bd;
+}
+
+.data {
+  margin-top: 100px;
+  font-size: 16px;
+} */
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.input {
+  width: 230px;
+  margin-bottom: 5px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.errorBorder {
+  border-color: #ff4136;
+}
+
+.errorMessage {
+  min-height: 18px;
+  /* margin-bottom: 5px; */
+  font-size: 0.6rem;
+  color: #ff4136;
+  visibility: hidden;
+}
+
+.errorMessage.show {
+  visibility: visible;
+}
+.button {
+  width: 300px;
+  padding: 10px;
+  margin-top: 50px;
+  margin-bottom: 25px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.button:hover {
+  opacity: 0.8;
+}
