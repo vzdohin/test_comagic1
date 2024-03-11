@@ -36,6 +36,7 @@ function FormComponent() {
         <>
           <Form className="form">
             <div>
+              <h2 className="form__title"> Введите свои данные</h2>
               <Field
                 name="name"
                 type="text"
