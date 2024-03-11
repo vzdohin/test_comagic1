@@ -67,7 +67,6 @@ function FullCalendar() {
               view="month"
               showNavigation={false}
               showNeighboringMonth={false}
-              // style={{ width: "auto" }}
             />
           </div>
         ))}

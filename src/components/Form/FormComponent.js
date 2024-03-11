@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Formik, Form, Field, ErrorMessage } from "formik";
+import { Formik, Form, Field } from "formik";
 import InputMask from "react-input-mask";
 import * as Yup from "yup";
 import "./FormComponent.css";
@@ -27,7 +27,6 @@ function FormComponent() {
       initialValues={{ name: "", phone: "", email: "" }}
       validationSchema={validationSchema}
       onSubmit={(values, { setSubmitting }) => {
-        // Прямое сохранение данных формы в состояние
         setSubmittedData(values);
         setSubmitting(false);
       }}
@@ -40,7 +39,7 @@ function FormComponent() {
               <Field
                 name="name"
                 type="text"
-                className={`input ${
+                className={`form__input ${
                   errors.name && touched.name ? "errorBorder" : ""
                 }`}
                 placeholder="Имя"
@@ -61,7 +60,7 @@ function FormComponent() {
                     {...field}
                     mask="+7 (999) 999-99-99"
                     placeholder="+7 (XXX) XXX-XX-XX"
-                    className={`input ${
+                    className={`form__input ${
                       errors.phone && touched.phone ? "errorBorder" : ""
                     }`}
                     onChange={(event) => {
@@ -83,7 +82,7 @@ function FormComponent() {
               <Field
                 name="email"
                 type="email"
-                className={`input ${
+                className={`form__input ${
                   errors.email && touched.email ? "errorBorder" : ""
                 }`}
                 placeholder="email@example.com"
@@ -97,12 +96,16 @@ function FormComponent() {
               </div>
             </div>
 
-            <button type="submit" className="button" disabled={isSubmitting}>
+            <button
+              type="submit"
+              className="form__button"
+              disabled={isSubmitting}
+            >
               Отправить
             </button>
           </Form>
           {submittedData && (
-            <div className="submittedData">
+            <div>
               <h3>Отправленные данные:</h3>
               <p>Имя: {submittedData.name}</p>
               <p>Телефон: {submittedData.phone}</p>
